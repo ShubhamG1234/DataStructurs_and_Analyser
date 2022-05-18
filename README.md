@@ -1,1 +1,1 @@
-# DataStructurs_and_Analyser
+# LogicalPrograms
