@@ -1,20 +1,23 @@
 ﻿
-Console.WriteLine("Welcome to Fibonacci Series !");
-
+Console.WriteLine("Welcome to Reverse Numbers !");
 
 {
-    int n1 = 0,
-    n2 = 1,
-    n3, i,
-    number;
-    Console.Write("Enter the number of elements: ");
-    number = Convert.ToInt32(Console.ReadLine());
-    Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
-    for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+    int num = 0;
+    int temp = 0;
+    int remainder = 0;
+    int reverse = 0;
     {
-        n3 = (n1 + n2);
-        Console.Write(n3 + " ");
-        n1 = n2;
-        n2 = n3;
+        Console.WriteLine("Enter an Integer \n");
     }
+    num = Convert.ToInt32(Console.ReadLine());
+
+    temp = num;
+    while (num > 0)
+    {
+        remainder = num % 10;
+        reverse = reverse * 10 + remainder;
+        num /= 10;
+    }
+    Console.WriteLine("Given Number is = {0}", temp);
+    Console.WriteLine("Its Reverse is = {0}", reverse);
 }
