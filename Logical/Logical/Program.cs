@@ -1,19 +1,20 @@
 ﻿
-Console.WriteLine("Welcome to the Prime Numbers !");
+Console.WriteLine("Welcome to Fibonacci Series !");
+
+
 {
-    int n, i, m = 0, sum = 0;
-    Console.Write("Enter the Number to check Prime: ");
-    n = Convert.ToInt32(Console.ReadLine());
-    m = n / 2;
-    for (i = 2; i <= m; i++)
+    int n1 = 0,
+    n2 = 1,
+    n3, i,
+    number;
+    Console.Write("Enter the number of elements: ");
+    number = Convert.ToInt32(Console.ReadLine());
+    Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
+    for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
     {
-        if (n % i == 0)
-        {
-            Console.Write("Number is not Prime.");
-            sum = 1;
-            break;
-        }
+        n3 = (n1 + n2);
+        Console.Write(n3 + " ");
+        n1 = n2;
+        n2 = n3;
     }
-    if (sum == 0)
-        Console.Write("Number is Prime.");
 }
